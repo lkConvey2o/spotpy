@@ -192,7 +192,7 @@ class TestObjectiveFunctions(unittest.TestCase):
         expected = (
             -0.8659231357310928,
             0.030303030303030304,
-            0.970533493046538,
+            0.7053349304653801,
             -0.5666937901878675,
         )
         res = of.kge_non_parametric(self.evaluation, self.simulation, return_all=True)

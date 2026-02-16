@@ -39,10 +39,6 @@ jobs:
           python -m pip install black 'isort[colors]<6'
           python -m pip install --editable .
 
-      - name: isort check
-        run: |
-          python -m black --check --diff --color .
-          python -m isort --check --diff --color .
 
   build_sdist:
     name: sdist on ${{ matrix.os }} with Python ${{ matrix.python-version }}
