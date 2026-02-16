@@ -544,7 +544,6 @@ class efast(_algorithm):
         np.savetxt(f, [names], "%s", delimiter=",")
 
         data = np.array(results)
-
         try:
             # convert array of void to array of float
             mod_results = np.full((data.shape[0], len(data[0])), np.nan)
@@ -565,3 +564,4 @@ class efast(_algorithm):
             np.savetxt(f, [sens_data], delimiter=",", fmt="%1.5f")
 
         f.close()
+        return sens_data

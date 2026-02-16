@@ -39,13 +39,14 @@ if __name__ == "__main__":
     res = spotpy.analyser.get_modelruns(results)
 
     # calculate the sensitivities
-    sampler.calc_sensitivity(results, dbname="eFAST_sens_hymod")
+    sens_data = sampler.calc_sensitivity(results, dbname="eFAST_sens_hymod")
 
     # plot the temporal parameter sensitivities
     spotpy.analyser.plot_efast(
-        dbname="eFast_sens_hymod", fig_name="efast_sensitivities.png"
-    )
-
+        dbname="eFast_sens_hymod", spot_setup=spot_setup, fig_name="efast_sensitivities.png")
+    
+    # import datetime as dt
+    # date_format = '%d.%m.%Y'
     # In case of more than on model output:
     # seperate restults from each other (in case more than one model output is saved in the database)
     # res = spotpy.analyser.get_modelruns_list(results)

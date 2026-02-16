@@ -527,7 +527,7 @@ def kge_non_parametric(evaluation, simulation, return_all=False):
 
         fdc_sim = np.sort(simulation / (np.nanmean(simulation) * len(simulation)))
         fdc_obs = np.sort(evaluation / (np.nanmean(evaluation) * len(evaluation)))
-        alpha = 1 - 0.5 * np.nanmean(np.abs(fdc_sim - fdc_obs))
+        alpha = 1 - 0.5 * np.nansum(np.abs(fdc_sim - fdc_obs))
 
         beta = np.mean(simulation) / np.mean(evaluation)
         kge = 1 - np.sqrt((cc - 1) ** 2 + (alpha - 1) ** 2 + (beta - 1) ** 2)

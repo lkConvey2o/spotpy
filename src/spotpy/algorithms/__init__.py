@@ -35,3 +35,4 @@ from .padds import padds  # Pareto Archived - Dynamicallly Dimensioned Search al
 from .rope import rope  # RObust Parameter Estimation
 from .sa import sa  # Simulated annealing
 from .sceua import sceua  # Shuffled Complex Evolution
+from .morris import morris # Morris Screening Sensitivity Test
