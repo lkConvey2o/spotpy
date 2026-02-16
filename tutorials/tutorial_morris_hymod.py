@@ -37,4 +37,4 @@ if __name__ == "__main__":
     spotpy.analyser.plot_morris_sensitivity(results, spot_setup)
 
     # Example to get the sensitivity index of each parameter
-    #SI = spotpy.analyser.get_sensitivity_of_morris(results)
+    # SI = spotpy.analyser.get_sensitivity_of_morris(results)
